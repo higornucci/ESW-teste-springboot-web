@@ -4,10 +4,15 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class CarrinhoDeCompra {
+import javax.persistence.Entity;
+
+import com.example.testingweb.EntidadeBase;
+
+@Entity
+public class CarrinhoDeCompra extends EntidadeBase {
 	
 	private List<ItemDoCarrinho> itensDoCarrinho;
-	
+
 	public CarrinhoDeCompra() {
 		itensDoCarrinho = new ArrayList<ItemDoCarrinho>();
 	}

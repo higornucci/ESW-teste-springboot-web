@@ -13,15 +13,15 @@ public class Produto extends EntidadeBase {
 	Produto(){
 	}
 
-	public Produto(String descricao, double valorUnitario) throws ValorInvalido {
+	public Produto(String descricao, double valorUnitario) throws ValorInvalidoException {
 		verificarSeValorMenorQueZero(valorUnitario);
 		this.descricao = descricao;
 		this.valorUnitario = valorUnitario;
 	}
 	
-	private void verificarSeValorMenorQueZero(double valorUnitario) throws ValorInvalido {
+	private void verificarSeValorMenorQueZero(double valorUnitario) throws ValorInvalidoException {
 		if(valorUnitario < 0) {
-			throw new ValorInvalido();
+			throw new ValorInvalidoException();
 		}
 	}
 
